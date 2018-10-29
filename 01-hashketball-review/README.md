@@ -26,9 +26,10 @@
 
 * Red, Green, Refactor
 * Make it work (shameless green), make it right, make it fast
-* Breaking problems down
+* Breaking problems down - Pseudocode
 * Checking if your _parts_ are correct
 * Dummy values
+
 
 ## Tools
 
@@ -48,3 +49,6 @@
 * Differentiate array methods by their respective return values
 
 ## Exercise
+
+
+## Deploy on Day One
