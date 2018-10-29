@@ -1,4 +1,4 @@
-require 'pry'
+# require 'pry'
 
 def game_hash
   {
@@ -243,15 +243,15 @@ end
 # end
 
 
-
-
 # # EXERCISE:
 # # Define a method called get_names that takes an array of instructors
 # # and returns just their names.
 # instructors = [
-#   {name: 'Alex', hometown: 'upstate ny', mood: 'excited'},
-#   {name: 'rachel', hometown: 'maine'},
-#   {name: 'maxwell', hometwon: 'brookyln'}
+#   {name: 'Rob', hometown: 'MD', mood: 'ready'},
+#   {name: 'Brit', hometown: 'Atlanta', mood: 'quizzical'},
+#   {name: 'Emily', hometown: 'East Fishkill, NY', mood: 'supportive'},
+#   {name: 'Roniece', hometown: 'The Bronx', mood: 'excited'},
+#   {name: 'Garry', hometown: 'Queens NY', mood: 'hyped'},
 # ]
 #
 # def get_names(instructors)
@@ -260,15 +260,13 @@ end
 
 
 
-
 # def get_players
 #
 # end
 
 
-
 # # EXERCISE
-# # What do the following return?
+# # What does the following return?
 #
 # arr = (1..100).to_a
 #
