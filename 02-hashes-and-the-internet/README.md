@@ -24,6 +24,7 @@
 
 ![Kinds of responses](https://breatheco.de/wp-content/uploads/2017/02/client-server-arquitechture.gif)
 
-* APIs
 * HTML
 * JSON (string formatted as a hash/object)
+* APIs
+* Gems
