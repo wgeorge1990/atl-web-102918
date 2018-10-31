@@ -8,23 +8,20 @@
 * Explain the difference between a class and an instance
 * Pass arguments to `new` by defining an initialize method in class
 * Create instance methods
-* Call methods on the implicit or explicit `self`
-* Define attribute readers and writers using `attr_` macros
-* Get more practice with array compositions (`each`, `map`, `select`/`filter`)
-* Explain the need for variable scope and why it's important to not utilize global variables
+* Call methods on `self` explicitly
 
 ## Deliverables
 
-Here is a naive implementation of a bank account in Ruby using only a hash which stores key-value pairs.
+Here is a simple example of a pokemon using a hash:
 
 ```ruby
-bank_account = {"user_id": 3, "balance": 100}
+## Does this need a name? How about a trainer?
+pikachu = { kind: 'electric', lvl: 5, hp: 35, atk: 55, def: 30 }
 ```
 
-Write an implementation of a bank account that meets the following requirements:
+Write an implementation of Pokemon capable of the following:
 
-* can print the balance of the account
-* can deposit money into the account
-* can withdraw money from the account
-* keeps track of the account number
-* keeps track of the customer id of the account
+* Can growl
+* Can display its stats
+* Can change HP
+* Can level up
