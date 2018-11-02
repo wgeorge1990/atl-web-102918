@@ -1,15 +1,12 @@
 class Trainer
-  attr_reader :wins, :losses
-  attr_accessor :pokemon
+  attr_reader :name, :wins, :losses
 
   @@trainers = []
 
-  def initialize(name, pokemon=[], wins=0, losses=0)
+  def initialize(name, wins=0, losses=0)
     @name = name
     @wins = wins
     @losses = losses
-    @pokemon = pokemon
-    ## Set trainer on all the pokemon to me / self
     @@trainers << self
   end
 
@@ -17,15 +14,21 @@ class Trainer
     @@trainers
   end
 
+  def pokemon
+    result = []
+    Pokemon.all.each do |pokemon|
+      result << pokemon if pokemon.trainer == self
+    end
+    result
+  end
+
   def catch_pokemon(caught)
-    ## set trainer to self
-    @pokemon << caught
+    caught.trainer = self
   end
 
-  def gift(friend, pokemon)
-    ## set trainer to friend
-    ## remove pokemon from my list of pokemon
-    friend.catch_pokemon(pokemon)
+  def give(friend, pokemon)
+    puts "#{self.name} is going to give #{pokemon.name} to #{friend.name}"
+    # friend.catch_pokemon(pokemon)
+    pokemon.trainer = friend
   end
-
 end

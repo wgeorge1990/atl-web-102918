@@ -5,6 +5,35 @@ know their trainer and trainers to collect badges. We describe this specific
 relationship between trainers and badges as a many to many relationship.
 Meaning that a trainer can have many badges and a badge can be won by many trainers!
 
+
+
+
+### Notes on Scope
+
+Local Variable Scope 
+* `x = 5`
+* Visible inside the method they are passed to or defined in
+
+Instance Variable Scope
+* `@name = 'brit'`
+* Visible inside the object it was defined in
+* `x = Student.new('brit')`
+* ... `x.name`
+
+Class Variable Scope
+* `@@pokemon = []`
+* Visible to all members or instances of the class
+* `class Pokemon: def all // @@pokemon // end`
+* `Pokemon.all`
+
+Global Scope
+* `class Example`
+* Visible everywhere for any reason at any time
+
+
+
+
+
 ## The world so far
 
 * Create a Trainer class. The class should have these methods:
@@ -20,6 +49,15 @@ Meaning that a trainer can have many badges and a badge can be won by many train
   * Reader methods for name and level.
   * `Pokemon#level_up` that gives a pokemon one additional level.
   * `Pokemon#fight(enemy)` that allows us to fight an enemy and returns true if we win.
+
+
+
+
+
+
+
+
+
 
 ## Deliverables
 
