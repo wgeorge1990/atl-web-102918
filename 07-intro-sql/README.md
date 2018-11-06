@@ -6,6 +6,17 @@
 
 ## What / Why / How SQL
 
+### What
+
+### Why
+
+### How
+
+Tools:
+- sqlite3
+- sqlite browser
+
+...Let's try it out!
 
 ## CRUD
 
@@ -54,11 +65,11 @@ Three kinds of commands:
 
 ```
 
-6. Check out the [Faker gem](https://github.com/stympy/faker). `gem install faker`, open up irb, run `require 'faker'` and then generate a fake name for yourself using `Faker::Name.name`. How would you update your name in the fans table to be your new name?
+6. Write the SQL to update your name in the fans table to be a new name?
 
-   ```sql
+```sql
 
-   ```
+```
 
 7. Write the SQL to return fans that are not fans of the black eyed peas.
 
