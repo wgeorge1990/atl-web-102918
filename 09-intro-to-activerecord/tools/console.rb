@@ -27,7 +27,5 @@ post1 = Post.new(title: 'Eyes',
                     And their tiny grain of dissimilarity.
                     Without eyes, my gaze is fixed on one bright point,
                     That grows large and takes me in.")
-post_tag1 = PostTag.new(post: post1, tag: tag1)
-post_tag2 = PostTag.new(post: post1, tag: tag2)
 
 binding.pry
