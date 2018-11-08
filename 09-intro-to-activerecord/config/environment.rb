@@ -1,11 +1,15 @@
 require 'date'
+require 'active_record'
 require 'bundler/setup'
 Bundler.require
 
-DB = {
-  conn: SQLite3::Database.new('db/redlinernotes.db')
-}
-DB[:conn].results_as_hash = true
 
+options = {
+  adapter: 'sqlite3',
+  database: 'db/redlinernotes.db'
+}
+ActiveRecord::Base.establish_connection(options)
+
+ActiveRecord::Base.logger = Logger.new(STDOUT)
 
 require_all 'app'

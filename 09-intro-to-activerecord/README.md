@@ -68,14 +68,19 @@ ActiveRecord gives us a default `initialize` method that we don't want to overri
 
 What are some things we'd like ActiveRecord to make possible?
 
-* ?
-* ?
-* ?
-* ?
-* ?
-* ?
-
-
+* quit dealing with SQL syntax
+* `.first` / get the first record in a table
+* `.all` / gets all the records from the table
+* `.limit(number)` / limit to a certain number of results
+* `.find(id)` / look up a record by primary key
+* `.find_by(column: value)` / look up a record by fields other than primary key
+* `.count` / count things
+* `example = Model.new(...)  ... example.save` / insert a record
+* `.where` / to filter records based on some criteria
+* `example.destroy` / delete a particular instance from the database
+* update
+* group by
+* join
 
 
 How does it do this _amazing stuff_?
