@@ -6,7 +6,22 @@ Today:
 2. Write migrations to build the database for a shop
 3. Maybe practice some queries if there's time
 
-Lots of details are coming but remember: the point of migrations is to create and alter tables safely from ruby.
+Lots of details are coming but remember: the point of migrations is to create and change tables safely from ruby.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -56,9 +71,11 @@ To have a class that can be saved in the database we have to do a few things.
 The Rails Migrations Guide is pretty good. But here are some important things to remember.
 
 1. Go in `db/migrate/` folder.
-2. They should inherit from / subclass `ActiveRecord::Migration`
-3. They must be _run from the command line** to take effect / change your database.
-4. They **cannot** be re-run. As a result, if we want to change the database we either:
+2. They should inherit from / subclass `ActiveRecord::Migration[5.2]`
+3. The file name for the migration must match the class name inside it.
+4. They must be _run from the command line** to take effect / change your database.
+  * `rake db:migrate`
+5. They **cannot** be re-run. As a result, if we want to change the database we either:
    * a) Write another migration.
    * b) "Rollback" or undo the last migration, then change the code and re-migrate.
 

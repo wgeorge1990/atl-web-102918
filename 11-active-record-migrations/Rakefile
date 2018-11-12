@@ -1,0 +1,14 @@
+require './config/environment'
+
+desc "Start a Ruby console"
+task :console do
+  Pry.start
+end
+
+namespace :db do
+  # This defines a task run with `rake db:migrate`
+  desc "Run migrations"
+  task :migrate do
+    ActiveRecord::Tasks::DatabaseTasks.migrate
+  end
+end
