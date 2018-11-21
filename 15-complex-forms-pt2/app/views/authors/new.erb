@@ -1,0 +1,23 @@
+<h1>Add a new author!</h1>
+
+<p>
+  Please tell us an author and some books of theirs
+  you would like to donate to the library. Thanks for
+  being a dope patron. <3
+  </form>
+</p>
+
+<form action="/authors" method="POST">
+  <input type="text" name="name" placeholder="Name" />
+  <h3>Donate some of their books</h3>
+  <div>
+    <% 4.times do |i| %>
+      <div>
+        <p>Book <%= i %></p>
+        <input type="text" name="books[][title]" placeholder="Book Title" />
+        <input type="text" name="books[][snippet]" placeholder="Book Snippet" />
+      </div>
+    <% end %>
+  </div>
+  <input type="submit" value="Add author" />
+</form>

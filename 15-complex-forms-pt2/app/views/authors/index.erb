@@ -1,0 +1,11 @@
+<h1>Authors in the Library</h1>
+
+<ul>
+  <% @authors.each do |author| %>
+    <li><%= author.name %></li>
+  <% end %>
+</ul>
+
+<p>Please help the library by contributing
+  <a href="/authors/new">more authors</a>!
+</p>

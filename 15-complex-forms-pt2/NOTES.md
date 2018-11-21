@@ -2,6 +2,11 @@
 
 ### Week 1, Day 3 - Complex Forms and Associations
 
+### Since yesterday...
+
+* Added Authors table & Model
+  * Show the associations
+
 ### Concepts...
 
 * restful routing
