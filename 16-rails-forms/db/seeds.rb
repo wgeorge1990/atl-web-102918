@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 c1 = Cohort.create(name: 'web-103017')
 c2 = Cohort.create(name: 'web-112017')
+c3 = Cohort.create(name: 'Hashlanta')
 
 s1 = Student.create(name: 'Rachel', cohort: c1)
 s2 = Student.create(name: 'Lindsey', cohort: c1)
@@ -14,3 +15,5 @@ s3 = Student.create(name: 'Esmery', cohort: c1)
 s4 = Student.create(name: 'Alex', cohort: c2)
 s5 = Student.create(name: 'Johann', cohort: c2)
 s6 = Student.create(name: 'Meryl', cohort: c2)
+s7 = Student.create(name: 'Brit', cohort: c3)
+s8 = Student.create(name: 'Kaeland', cohort: c3)

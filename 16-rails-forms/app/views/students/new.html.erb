@@ -1,0 +1,11 @@
+<h1>Add a new student:</h1>
+
+<%= form_tag(students_path) do %>
+  <%= label_tag(:name, "Student Name: ") %>
+  <%= text_field_tag(:name) %>
+  <br />
+  <%= label_tag(:cohort_id, "Cohort ID: ") %>
+  <%= number_field_tag(:cohort_id) %>
+  <br />
+  <%= submit_tag("Save") %>
+<% end %>
