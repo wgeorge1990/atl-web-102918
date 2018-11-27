@@ -1,10 +1,6 @@
-<h1>Add a new student:</h1>
+<h1>Edit student:</h1>
 
-<% if @message %>
-  <p><%= @message %></p>
-<% end %>
-
-<%= form_tag(students_path) do %>
+<%= form_tag(student_path(@student), method: "PUT") do %>
   <%= label_tag(:name, "Student Name: ") %>
   <%= text_field_tag(:name, @student.name) %>
   <br />
