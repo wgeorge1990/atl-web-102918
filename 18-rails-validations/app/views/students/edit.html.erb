@@ -1,0 +1,17 @@
+<h1>Edit student:</h1>
+
+<%= form_tag(student_path(@student), method: "PUT") do %>
+  <%= label_tag(:name, "Student Name: ") %>
+  <%= text_field_tag(:name, @student.name) %>
+  <br />
+  <%= label_tag(:cohort_id, "Cohort: ") %>
+  <select name="cohort_id">
+    <% @cohorts.each do |cohort| %>
+      <option value="<%= cohort.id %>">
+        <%= cohort.name %>
+      </option>
+    <% end %>
+  </select>
+  <br />
+  <%= submit_tag("Save") %>
+<% end %>

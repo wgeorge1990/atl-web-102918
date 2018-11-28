@@ -1,0 +1,21 @@
+<h1>Add a new student:</h1>
+
+<% if @message %>
+  <p><%= @message %></p>
+<% end %>
+
+<%= form_tag(students_path) do %>
+  <%= label_tag(:name, "Student Name: ") %>
+  <%= text_field_tag(:name, @student.name) %>
+  <br />
+  <%= label_tag(:cohort_id, "Cohort: ") %>
+  <select name="cohort_id">
+    <% @cohorts.each do |cohort| %>
+      <option value="<%= cohort.id %>">
+        <%= cohort.name %>
+      </option>
+    <% end %>
+  </select>
+  <br />
+  <%= submit_tag("Save") %>
+<% end %>
