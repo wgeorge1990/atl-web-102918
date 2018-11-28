@@ -6,3 +6,10 @@
 
   <input type="submit">
 </form>
+
+
+<% @cohort.errors.each do |field, message| %>
+  <span style="color: red">
+    <%= field %>: <%= message %>
+  <span>
+<% end %>

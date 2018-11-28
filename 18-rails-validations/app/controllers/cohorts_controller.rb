@@ -15,7 +15,7 @@ class CohortsController < ApplicationController
     @cohort = Cohort.new(cohort_params)
 
     if @cohort.save
-      redirect_to '/cohorts'
+      redirect_to cohort_path(@cohort.id)
     else
       render :new
     end
@@ -23,6 +23,7 @@ class CohortsController < ApplicationController
 
   def edit
     @cohort = Cohort.find(params[:id])
+    # implicit rendering
   end
 
   def update
