@@ -1,4 +1,5 @@
 
+
 ## Today's Goals
 
 * Project Pitches at 11:30 or 1pm, we'll come around
@@ -25,10 +26,26 @@
 
 4. Hmm, any user can edit or delete any post.
   * Let's add a login form (in a LoginController?)
-  * What problem does login solve?
-    * What is your experience of login forms?
-    * What does persistent mean? Is it persistent?
+  * Q: What problem does login solve?
+    - A: Know what information to share with a user
+    - A: Can set up preferences specific to a user
+    - A: Helps a site do what it's designed to
+    - A: Knows which data goes with which user
+    - A: Lets the server know who the user is for a request
+
+    * What does persistent mean? Is login persistent?
+      - A: Something persistent remains.
+      - A: It gets saved.
+      - A: Login seems persistent. I stay logged in.
     * What forms of persistent storage do we know?
+      - A: Database.
+      - A: Files? Not just in memory. On disk.
+      - A: Flash + Session / Cookies in the browser.
+    * Important notes on cookies:
+      * Stored on the client, not the server.
+      * Are persisted to disk.
+      * Can set expiration times.
+      * Because their stored on the client, they're tied to a specific device or user.
 
 5. Track `user_id` in the session.
 
