@@ -63,7 +63,14 @@
 8. The two most common things the server will want to do are figure out
    who is making the current request and making sure a user is logged in
    to be able to view certain pages. Let's add methods to help with that!
-  * Talk about `helper_method`!
+   * three common goals:
+     * 1) know who's logged in or if someone is logged in?
+       * solved by `current_user`
+     * 2) preventing someone from going to a page unless they're logged in
+       * shouldn't be able to add post unless logged in
+       * `before_action :authorize!`
+     * 3) keeping someone from messing with data that's not theirs
+       * `if current_user == object.user_id`
 
 9. Protect appropriate methods with a `before_action`.
 

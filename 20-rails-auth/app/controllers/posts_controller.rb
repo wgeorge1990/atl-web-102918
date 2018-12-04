@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, except: [:new, :create, :index]
+  before_action :authorize!, except: [:show, :index]
 
   def new
     @users = User.all
@@ -36,7 +37,11 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post.destroy
+    if @post.user_id == current_user.id
+      @post.destroy
+    else
+      flash[:notice] = "You can only mess with your own stuff."
+    end
     redirect_to posts_path
   end
 
