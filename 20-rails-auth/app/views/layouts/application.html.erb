@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blerg</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if flash[:error] %>
+      <p style="color: red">
+        <%= flash[:error] %>
+      </p>
+    <% elsif flash[:notice] %>
+      <p><%= flash[:notice] %></p>
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>
