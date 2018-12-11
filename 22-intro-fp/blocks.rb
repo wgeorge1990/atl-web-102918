@@ -1,9 +1,16 @@
+require 'pry'
+
 ## Here is some code that shouldn't surprise you...
 
 nums = [1,2,3,4,5]
 
 ### Map
 doubled = nums.map {|i| i * 2 }
+
+
+
+
+
 
 ### Which would be
 def map_by_hand(nums)
@@ -13,6 +20,41 @@ def map_by_hand(nums)
   end
   new_nums
 end
+
+## Adding a method to a class
+
+class Array
+  def lulz
+    puts "i do what i want"
+  end
+
+  def my_map
+    result = []
+    self.each do |item|
+      result << yield(item)
+    end
+    result
+  end
+
+  def my_map
+    result = []
+    index = 0
+    while index < self.length
+      item = self[index]
+      puts "item at index #{index} is #{item}"
+      after_running = yield(item)
+      puts "once I've run the block, that is: #{after_running}"
+      result << after_running
+      index += 1
+    end
+    result
+  end
+end
+
+
+
+binding.pry
+
 
 ### Select
 evens = nums.select {|i| i % 2 == 0}

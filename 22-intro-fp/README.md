@@ -28,10 +28,10 @@ To quote from "Structure and Interpretation of Computer Programs",
 > In general, programming languages impose restrictions on the ways in which
 > computational elements can be manipulated. Elements with the fewest
 > restrictions are said to have first-class status.
-> Some of the "rights andf privileges are":
-> * Named by variables,
-> * Passed as arguments to procedures,
-> * Returned as the results of procedures,
+> Some of the "rights and privileges are":
+> * Named by / stored in variables,
+> * Passed as arguments to functions or methods,
+> * Returned as the results of functions or methods,
 > * Included in data structures.
 
 
@@ -52,7 +52,7 @@ To do this, let's see:
 
 * Function to compute sum a range of numbers (a -> b)
   * should take a, b as args
-  * now make it recursive
+  * now make it recursive?
   * now extend it to take a callback to compute the "next" number
     * Show that inline functions and named functions are equivalent
     * Show that arrow functions are just a minor syntactic sugar
