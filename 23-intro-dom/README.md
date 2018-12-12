@@ -20,6 +20,7 @@
 
 * See how to write different selectors and what they match
   * Talk about NodeList or HTMLCollection vs Array
+
   | Selector name                   | Return shape   | Return type    | Reference             | forEach? |
   | ------------------------------- | -------------- | -------------- | --------------------- | -------- |
   | `node.getElementById()`        | Single element | Element        | https://goo.gl/8cHGoy | N/A      |
