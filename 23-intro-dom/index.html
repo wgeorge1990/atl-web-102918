@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+    <title>Best of 2018</title>
+    <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">
+          The Best of 2018
+        </h1>
+        <table id="best-table" class="table">
+          <thead>
+            <tr>
+              <th scope="col">Item</th>
+              <th scope="col">Category</th>
+              <th scope="col">Submitter</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="row-1">
+              <td><a class="item-link" href="https://www.youtube.com/watch?v=Y2amTl5lBYM">Hollow Knight</a></td>
+              <td>Video Game</td>
+              <td>Brit</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <form>
+          <div class="field">
+            <label class="label">Item</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Item">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Link</label>
+            <div class="control">
+              <input class="input" type="text" placeholde="Link">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Category</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Category">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Submitter</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Submitter">
+            </div>
+          </div>
+          <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
