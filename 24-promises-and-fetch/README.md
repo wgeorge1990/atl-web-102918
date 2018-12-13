@@ -1,5 +1,7 @@
 ![promise-me](https://media.giphy.com/media/5G98t8QjqBLK8/giphy.gif)
 
+![javascript-fun](https://i.imgur.com/hAHJSVD.gif)
+
 # Promises and Fetch
 
 ## Objectives
@@ -16,6 +18,7 @@
 * Maybe add event listeners to the loaded pokemon so they can be deleted
 * If there's time, pair and share:
   * Write a handler that does a post to add a new pokemon and renders it.
+  * Add brit and rob as pokemon!
 
 ## Resources
 
