@@ -3,6 +3,38 @@ const SERVER_URL = "http://localhost:3000/pokemon/"
 document.addEventListener("DOMContentLoaded", initPage)
 
 function initPage () {
+  fetchPokemon()
+  addFormHandler()
+}
+
+function addFormHandler() {
+  var form = document.querySelector("#new-pokemon-form")
+  form.addEventListener('submit', processNewPokemon)
+}
+
+function processNewPokemon(event) {
+  event.preventDefault()
+
+  var name = document.querySelector("#name-input").value
+  var sprite = document.querySelector("#sprite-input").value
+
+  var request = new Request(SERVER_URL)
+  var options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      name: name,
+      sprite: sprite
+    })
+  }
+  fetch(request, options).then(function (resp) {
+    return resp.json()
+  }).then(renderPokemon)
+}
+
+function fetchPokemon() {
   fetch(SERVER_URL).then(function (data) {
     return data.json()
   }).then(function (json) {
