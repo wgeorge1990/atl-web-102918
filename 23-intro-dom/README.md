@@ -32,7 +32,7 @@
 * See how to manipulate a DOM node
   * innerText
   * innerHTML
-  * traversal / parents, childen, siblings
+  * traversal / finding parents, childen, siblings
 
 * See how to add a DOM node (2 ways)
   * futzing with innerHTML
@@ -43,6 +43,6 @@
   * preventDefault
   * show examples of click and submit
   * Only add them once, do it once page is loaded _or_ new element is added
-    * Add them when the page is loaded or when new HTML is added
+    * If it is added multiple times, it will run multiple times (per event)
 
 * Make sure y'all get a good video on how javascript events execute / callback stack, etc
