@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", initPage);
 
+const BASE_URL = "http://localhost:3000"
+
 function initPage() {
   renderBookList()
 }
@@ -16,7 +18,21 @@ function bookView(book) {
 }
 // "Model" function or fetch function. just exists to get the data
 function getBooks() {
-  return fetch("http://localhost:3000/books").then(res => res.json())
+  return fetch(`${BASE_URL}/books`).then(res => res.json())
+}
+
+function patchBook(id, users) {
+  let url = `${BASE_URL}/books/${id}`
+  let options = {
+    method: 'PATCH',
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      users: users
+    })
+  }
+  return fetch(url, options).then(res => res.json())
 }
 
 function bookListView() {
