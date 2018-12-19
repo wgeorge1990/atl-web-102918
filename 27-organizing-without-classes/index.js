@@ -4,10 +4,6 @@ function initPage() {
   renderBookList()
 }
 
-function bookListView() {
-  return getBooks().then(json => json.map(bookView).join(""))
-}
-
 function renderBookList() {
   let list = document.querySelector("#list")
   bookListView().then(booksHtml => {

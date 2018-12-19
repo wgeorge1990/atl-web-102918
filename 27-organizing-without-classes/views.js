@@ -10,6 +10,10 @@ function bookView(book) {
           </li>`
 }
 
+function bookListView() {
+  return getBooks().then(json => json.map(bookView).join(""))
+}
+
 function bookShowView(bookId, thumbnail, description, users) {
   let userListHtml = users.split(",").map(user => `<li>${user}</li>`).join("")
   return `<div data-id="${bookId}">
