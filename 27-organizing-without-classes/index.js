@@ -6,9 +6,11 @@ function initPage() {
 
 // "View" function. just exists to turn an object -> html
 function bookView(book) {
+  let users = book.users.map(user => user.username).join(",")
   return `<li id="book-${book.id}" class="book-item"
               data-image="${book.img_url}"
-              data-description="${book.description}">
+              data-description="${book.description}"
+              data-users="${users}">
             ${book.title}
           </li>`
 }
@@ -22,10 +24,13 @@ function bookListView() {
 }
 
 function bookShowView(thumbnail, description, users) {
+  let userListHtml = users.split(",").map(user => `<li>${user}</li>`).join("")
   return `<div>
             <img src="${thumbnail}" />
             <p>${description}</p>
-            <p>Users who liked it: ${users}</p>
+            <ul>Users who liked it:</ul>
+              ${userListHtml}
+            </ul>
           </div>`
 }
 
@@ -41,6 +46,6 @@ function renderBookList() {
 function renderBookShow(event) {
   const showPanel = document.querySelector("#show-panel")
   let dataset = event.target.dataset
-  let html = bookShowView(dataset.image, dataset.description, [])
+  let html = bookShowView(dataset.image, dataset.description, dataset.users)
   showPanel.innerHTML = html
 }
