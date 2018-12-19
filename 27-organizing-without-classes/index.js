@@ -9,7 +9,8 @@ function initPage() {
 // "View" function. just exists to turn an object -> html
 function bookView(book) {
   let users = book.users.map(user => user.username).join(",")
-  return `<li id="book-${book.id}" class="book-item"
+  return `<li class="book-item"
+              data-id="${book.id}"
               data-image="${book.img_url}"
               data-description="${book.description}"
               data-users="${users}">
@@ -39,9 +40,9 @@ function bookListView() {
   return getBooks().then(json => json.map(bookView).join(""))
 }
 
-function bookShowView(thumbnail, description, users) {
+function bookShowView(bookId, thumbnail, description, users) {
   let userListHtml = users.split(",").map(user => `<li>${user}</li>`).join("")
-  return `<div>
+  return `<div data-id="${bookId}">
             <img src="${thumbnail}" />
             <p>${description}</p>
             <ul>Users who liked it:</ul>
@@ -64,12 +65,13 @@ function renderBookList() {
 function renderBookShow(event) {
   const showPanel = document.querySelector("#show-panel")
   let dataset = event.target.dataset
-  let html = bookShowView(dataset.image, dataset.description, dataset.users)
+  let html = bookShowView(dataset.id, dataset.image, dataset.description, dataset.users)
   showPanel.innerHTML = html
   const button = document.querySelector("button")
   button.addEventListener('click', likeBook)
 }
 
 function likeBook(event) {
-  console.log(event)
+  let bookId = event.target.parentNode.dataset.id
+  console.log(bookId)
 }
