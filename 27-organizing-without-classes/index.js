@@ -1,28 +1,21 @@
-document.addEventListener("DOMContentLoaded", addUsersToPage);
+document.addEventListener("DOMContentLoaded", renderBookList);
 
-const BASE_URL = "http://localhost:3000"
-
-// A "model" function
-function getUsers() {
-  let url = `${BASE_URL}/users`
-
-  return fetch(url).then(res => res.json())
+// "Model" function or fetch function. just exists to get the data
+function getBooks() {
+  return fetch("http://localhost:3000/books").then(res => res.json())
 }
 
-// A "view" function
-function renderUser(user) {
-  return `<li class="user" data-id="${user.id}">
-            ${user.username}
-          </li>`;
+// "View" function. just exists to turn an object -> html
+function bookListView(book) {
+  return `<li>${book.title}</li>`
 }
 
-// A "controller" function
-function addUsersToPage(event) {
-  getUsers().then(users => {
-    let ul = document.createElement("ul")
-    users.forEach(user => {
-      ul.innerHTML += renderUser(user)
+function renderBookList () {
+  const list = document.querySelector("#list")
+  getBooks().then(json => {
+    json.forEach(book => {
+      let html = bookListView(book)
+      list.innerHTML += html
     })
-    document.body.appendChild(ul)
   })
 }
