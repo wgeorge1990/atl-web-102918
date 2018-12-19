@@ -22,6 +22,10 @@ function getBooks() {
   return fetch(`${BASE_URL}/books`).then(res => res.json())
 }
 
+function getBook(id) {
+  return fetch(`${BASE_URL}/books/${id}`).then(res => res.json())
+}
+
 function patchBook(id, users) {
   let url = `${BASE_URL}/books/${id}`
   let options = {
@@ -45,7 +49,8 @@ function bookShowView(bookId, thumbnail, description, users) {
   return `<div data-id="${bookId}">
             <img src="${thumbnail}" />
             <p>${description}</p>
-            <ul>Users who liked it:</ul>
+            <ul class="user-list">
+            Users who liked it:
               ${userListHtml}
             </ul>
 
@@ -73,5 +78,10 @@ function renderBookShow(event) {
 
 function likeBook(event) {
   let bookId = event.target.parentNode.dataset.id
-  console.log(bookId)
+  getBook(bookId).then(book => {
+    book.users.push({ id: 1, username: 'pouros' })
+    patchBook(bookId, book.users)
+    let userList = document.querySelector(".user-list")
+    userList.innerHTML += "<li>pouros</li>"
+  })
 }
