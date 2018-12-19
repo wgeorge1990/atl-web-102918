@@ -1,3 +1,5 @@
+const BASE_URL = "http://localhost:3000"
+
 // "Model" function or fetch function. just exists to get the data
 function getBooks() {
   return fetch(`${BASE_URL}/books`).then(res => res.json())

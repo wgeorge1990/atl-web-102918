@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", initPage);
 
-const BASE_URL = "http://localhost:3000"
-
 function initPage() {
   renderBookList()
 }
