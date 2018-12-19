@@ -31,6 +31,8 @@ function bookShowView(thumbnail, description, users) {
             <ul>Users who liked it:</ul>
               ${userListHtml}
             </ul>
+
+            <button>Like this book!</button>
           </div>`
 }
 
@@ -48,4 +50,10 @@ function renderBookShow(event) {
   let dataset = event.target.dataset
   let html = bookShowView(dataset.image, dataset.description, dataset.users)
   showPanel.innerHTML = html
+  const button = document.querySelector("button")
+  button.addEventListener('click', likeBook)
+}
+
+function likeBook(event) {
+  console.log(event)
 }
