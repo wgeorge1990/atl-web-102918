@@ -1,8 +1,4 @@
-document.addEventListener("DOMContentLoaded", initPage);
-
-function initPage() {
-  renderBookList()
-}
+document.addEventListener("DOMContentLoaded", renderBookList);
 
 function renderBookList() {
   let list = document.querySelector("#list")
